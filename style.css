@@ -12,17 +12,261 @@
     --color-gray-1: #777;
     --color-gray-2: #999;
 }
-h3, p{
-    font-family: 'Crimson Text', serif;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
+body{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    color:var(--color-light-2);
+}
 
 h1{
     font-family: 'Playfair Display SC', serif;
-    font-size: 5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    
 }
 
 h2{
     font-family: 'Cinzel';
-    font-size: 4rem;
+    font-size: 3rem;
+}
+
+h3, 
+p{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.8rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-light-2);
+    font-size: 1.6rem;
+}
+
+a:hover{
+ color: var(--color-light-1);
+ transform: scale(1.05)
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    padding: 10vh 10vw;
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    filter: brightness(130%);
+    
+
+}
+
+main::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0,0,0,.6);
+    box-shadow: inset 8rem 6rem 20rem #000, inset -8rem -6rem 20rem #000;
+    
+    
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+   
+    
+}
+
+svg{
+    fill: var(--color-light-2);
+    
+}
+
+.logo{
+    width: 10rem;
+    height: 10rem;
+    z-index: 5;
+}
+
+.title__box{
+    width: 80vw;
+    display: flex;
+    
+    z-index: 5;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    transition: all .2s;
+    
+    
+    
+}
+
+.title__box--search{
+    width: 40rem;
+    display: flex;
+    align-items: center;
+ 
+    justify-content: center;
+    transition: all .2s;
+    
+}
+
+#search_input{
+    
+    font-size: 2rem;
+    text-indent: 1rem;
+    height: 4rem;  
+    border-radius: 10rem;
+    background-color: var(--color-light-1);
+    color: var(--color-gray-1);
+    border: none;
+    padding: .7rem 2rem;
+    width: 90%;
+   
+    margin-right: -3.5rem;
+    transition: all .2s;
+    
+}
+
+.search-icon{
+    height: 2.5rem;
+    width: 2.25rem;
+    background-color: var(--color-light-1);
+    z-index: 10;
+    
+    
+}
+#search_input:focus{
+    outline: none;
+    width: 110%;
+   
+    background-color: var(--color-light-1);
+}
+
+.search-icon:focus{
+  outline: none;
+}
+
+.search-icon:active{
+    transform: translateY(2px);
+}
+
+
+
+
+.links__box{
+    width: 25vw;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorites{
+    
+    
+
+}
+.current{
+    
+
+}
+.sign-in{
+    display: inline-block;
+    outline: none;
+    padding: 1.2rem 1.6rem;
+    width: 10rem;
+    background-color: transparent;
+    border: 1px var(--color-dark-2) solid;
+    color: var(--color-dark-1);
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+.sign-in:hover{
+    background-color: var(--color-dark-2);
+    color: var(--color-white-2)
+}
+
+.top1,
+.top2{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.top1{
+    fill: coral
+}
+
+.top2{
+    fill: hotpink
+}
+
+/* Container */
+.middle__container{
+    display: grid;
+    grid-template-columns: [full-start] 1fr [mid-start] 2fr [mid-end] 1fr [full-end];
+    margin-top: 7rem;
+    grid-column-gap: 4rem;
+    
+}
+
+.input{
+    width: 20vw;
+    height: 50vh;
+    background-color: var(--color-dark-1);
+    grid-column: full-start / mid-start;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+}
+
+.input-pic{
+    width: 30%;
+}
+
+.display{
+    grid-column: mid-start / mid-end;
+    z-index: 5;
+    width: 40vw;
+    height: 50vh;
+    background-color:red
+    
+}
+
+.display__library{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, min-content);
+}
+
+.finished{
+    grid-column: mid-end / full-end;
+    z-index: 5;
+    background-color: var(--color-dark-2);
 }

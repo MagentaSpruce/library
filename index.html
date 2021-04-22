@@ -5,15 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <script delay src="index.js"></script>
-    <title>Library</title>
+    <title>Library - Odin Project</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <h2>I am telling you what I know</h2>
-    <h3>Please do not disturb me peasant!</h3>
-    <p>Im just a poor boy from a poor family. Please o please won't you let me come to get in out of the cold please sir my toes have all but froze plum off and my stomach is as a tiger was raised without only eating as isnt proper at all.
-    </p>
+    <main>
+        <header>
+    
+            <svg class="logo">
+                <use xlink:href="img/sprite.svg#icon-open-book"></use>
+            </svg>
+            <div class="title__box">
+    
+                <h1>Fable's Library</h1>
+    
+                <div class="title__box--search">
+                    <input id="search_input" placeholder="Search by title">
+                    <img class="search-icon" src="search.svg" alt="">
+                </div>
+            </div>
+            <div class="links__box">
+                <div class="nav__tag">
+                    <a class="favorites" href="#">Favorites <svg class="top1">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg></a>
+                </div>
+                <div class="nav__tag">
+                    <a class="current" href="#">Current </a><svg class="top2">
+                        <use xlink:href="img/sprite.svg#icon-eraser"></use>
+                    </svg>
+                </div>
+                <button class="sign-in">Sign in</button>
+            </div>
+        </header>
+        <div class="middle__container">
+            <div class="input">
+                <h3>Inputs here</h3>
+                <p>make them counts</p>
+                <input type="text" name="title" id="title__input">
+                <input type="text" name="author" id="author__input">
+                <button class="status">status</button>
+                <button type="submit">submit</button>
+                <img src="/img/input.jpg" alt="classic novels" class="input-pic">
+            </div>
+    
+            <div class="display">
+                <h2>Library</h2>
+                <div class="display__library">
+                    <p>grid here</p>
+                </div>
+            </div>
+    
+            <div class="finished">
+                <h3>Finished</h3>
+                <div class="finished_grid">
+                    <p>grid here</p>
+                </div>
+                <button class="next">Next &rarr;</button>
+            </div>
+        </div>
+    </main>
+
     
 </body>
 </html>
