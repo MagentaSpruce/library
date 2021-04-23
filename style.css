@@ -11,6 +11,13 @@
     --color-white-2: #eee;
     --color-gray-1: #777;
     --color-gray-2: #999;
+
+    --opacity-s: .2;
+    --opacity-l: .7;
+    --z-index-xs: -5;
+    --z-index-s: 1;
+    --z-index-m: 5;
+    --z-index-l: 10;
 }
 
 *,
@@ -50,6 +57,12 @@ p{
     font-size: 1.8rem;
 }
 
+h5{
+    color: var(--color-white-2);
+    margin-top: .2rem;
+    
+}
+
 a{
     text-decoration: none;
     color: var(--color-light-2);
@@ -58,7 +71,8 @@ a{
 
 a:hover{
  color: var(--color-light-1);
- transform: scale(1.05)
+ transform: scale(1.05);
+ text-decoration: underline;
 }
 
 ul{
@@ -82,7 +96,7 @@ main::after{
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
+    z-index: var(--z-index-s);
     background: rgba(0,0,0,.6);
     box-shadow: inset 8rem 6rem 20rem #000, inset -8rem -6rem 20rem #000;
     
@@ -107,14 +121,14 @@ svg{
 .logo{
     width: 10rem;
     height: 10rem;
-    z-index: 5;
+    z-index: var(--z-index-m);
 }
 
 .title__box{
     width: 80vw;
     display: flex;
     
-    z-index: 5;
+    z-index: var(--z-index-m);
     margin: 0 auto;
     align-items: center;
     flex-direction: column;
@@ -125,7 +139,7 @@ svg{
 }
 
 .title__box--search{
-    width: 40rem;
+    width: 50rem;
     display: flex;
     align-items: center;
  
@@ -134,7 +148,7 @@ svg{
     
 }
 
-#search_input{
+#search__input{
     
     font-size: 2rem;
     text-indent: 1rem;
@@ -155,11 +169,11 @@ svg{
     height: 2.5rem;
     width: 2.25rem;
     background-color: var(--color-light-1);
-    z-index: 10;
+    z-index: var(--z-index-l);
     
     
 }
-#search_input:focus{
+#search__input:focus{
     outline: none;
     width: 110%;
    
@@ -179,21 +193,13 @@ svg{
 
 .links__box{
     width: 25vw;
-    z-index: 5;
+    z-index: var(--z-index-m);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.favorites{
-    
-    
 
-}
-.current{
-    
-
-}
 .sign-in{
     display: inline-block;
     outline: none;
@@ -219,11 +225,11 @@ svg{
 }
 
 .top1{
-    fill: coral
+    fill: coral;
 }
 
 .top2{
-    fill: hotpink
+    fill: royalblue
 }
 
 /* Container */
@@ -237,12 +243,13 @@ svg{
 
 .input{
     width: 20vw;
-    height: 50vh;
+    height: 55vh;
     background-color: var(--color-dark-1);
     grid-column: full-start / mid-start;
     display: flex;
     flex-direction: column;
-    z-index: 5;
+    z-index: var(--z-index-m);
+    opacity: var(--opacity-l);
 
 }
 
@@ -252,10 +259,13 @@ svg{
 
 .display{
     grid-column: mid-start / mid-end;
-    z-index: 5;
+    z-index: var(--z-index-m);
     width: 40vw;
     height: 50vh;
-    background-color:red
+    background-color: var(--color-white-2);
+    opacity: var(--opacity-s);
+    color: red;
+
     
 }
 
@@ -263,10 +273,105 @@ svg{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, min-content);
+    justify-items: center;
+}
+
+
+
+
+.finished__section{
+    grid-column: mid-end / full-end;
+    z-index: var(--z-index-m);
+    background-color: var(--color-white-2);
+    opacity: var(--opacity-l);
+    height: 55vh;
+ 
+}
+
+.finish-title{
+    color: var(--color-dark-2);
+    text-align: center;
+    letter-spacing: 3px;
+    margin: .5rem 0;
+    
+    
+}
+
+.finished__grid{
+    margin: 0rem 1rem;
+    display:grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-row-gap: 1rem;
+    background-color: var(--color-dark-1);
 }
 
 .finished{
-    grid-column: mid-end / full-end;
-    z-index: 5;
-    background-color: var(--color-dark-2);
+    background-color: var(--color-gray-2);
+    height: 20rem;
+    
+    
+    
+}
+
+.img__container{
+    background-color:var(--color-dark-1);
+    padding: 1rem;
+    height: 10rem;
+    
+    margin: 0 auto;
+    display: flex;
+    border-radius: 5px;
+    position: relative;
+  
+
+
+    
+}
+
+.finished__img{
+  width: 100%;
+   
+}
+
+.finished__like{
+fill: crimson;
+height: 2rem;
+width: 2rem;
+position: absolute;
+top: 0;
+left: 85%;
+
+}
+
+.finished__like1{
+fill: var(--color-dark-2);
+height: 2rem;
+width: 2rem;
+}
+
+.finished__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-content: center;
+}
+
+.finished__title{
+    padding: .5rem 0;
+}
+
+.finished__title,
+.finished__author,
+.finished__pages,
+.finished__rating{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+
+
 }
