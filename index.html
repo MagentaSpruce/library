@@ -41,34 +41,80 @@
         </header>
         <div class="middle__container">
             <div class="input">
-                <h3>Inputs here</h3>
-                <p>make them counts</p>
-                <input type="text" name="title" id="title__input">
-                <input type="text" name="author" id="author__input">
-                <button class="status">status</button>
-                <button type="submit">submit</button>
-                <img src="/img/input.jpg" alt="classic novels" class="input-pic">
+                <div class="input__title">
+                    <p>Input the following then submit:</p>
+                    <h3>New books go here &darr;</h3>
+                </div>
+                <form action>
+                    <div class="five__columns">
+                        <label for="name">Title</label>
+                        <input type="text" class="u-full-width" id="name">
+                    </div>
+                    <div class="five__columns">
+                        <label for="author">Author</label>
+                        <input type="text" class="u-full-width" id="author">
+                    </div>
+                    <div class="two__columns">
+                        <label for="status">Status</label>
+                        <select name="status" id="status" class="status-btn">
+                            <option value="read">Read</option>
+                            <option value="reading">Reading</option>
+                            <option value="not-read">Not read</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="submit" class="button-primary">
+                    </form>
+                    <div class="input-pic"></div>
             </div>
-    
-            <div class="display">
-                <h2>Library</h2>
-                <div class="display__library">
-                    <div class="grid-item">
-                        <h4>Author</h4>
-                    </div>
-                    <div class="grid-item">
-                        <h4>Title</h4>
-                    </div>
-                    <div class="grid-item">
-                        <h4>Status</h4>
-                    </div>
-                    <div class="grid-item">
-                        <h4>Rating</h4>
-                    </div>
-                    <div class="grid-item">
-                        <h4>Delete</h4>
-                    </div>
-                    </div>
+    <div class="display">
+        <h2>Library</h2>
+        <div class="row">
+            <div class="twelve__columns"></div>
+            <table class="twelve__columns">
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Rating</th>
+                        <th></th>
+                    </tr>
+                </tbody>
+                <tbody id="book-table-body">
+                    <tr>
+                        <td>Naruto</td>
+                        <td>Naruto mini</td>
+                        <td>
+                            <button class="status-button">read</button>
+                        </td>
+                        <td>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Naruto</td>
+                        <td>Naruto mini</td>
+                        <td>
+                            <button class="status-button">read</button>
+                        </td>
+                        <td>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Naruto</td>
+                        <td>Naruto mini</td>
+                        <td>
+                            <button class="status-button">reading</button>
+                        </td>
+                        <td>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                 </div>
+                    
                     </div>
                     
                     <div class="finished__section">
