@@ -139,5 +139,5 @@ render();
 
 ```
 
-All of these functions are JS code is straight forward and so no further explantation is neccessary.
+All of these functions and JS code is straight forward and so no further explantation is neccessary.
 ***End Walkthrough
