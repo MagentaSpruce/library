@@ -11,18 +11,17 @@ const $name = document.querySelector('#name');
 const $author = document.querySelector('#author');
 const $status = document.querySelector('#status');
 const $tableBody = document.querySelector("#book-table-body");
-const form = document.querySelector("form").addEventListener("submit", (e) => {
-   e.preventDefault();
-    addBookToLibrary();
-    render();
-   clearForm();
-    
-})
-
-const $table = document.querySelector("table")
+const $form = document.querySelector('#form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  addBookToLibrary();
+  render();
+  clearForm();
+  console.log('test');
+});
 
 
-.addEventListener("click", (e) => {
+
+const $table = document.querySelector("table").addEventListener("click", (e) => {
    const currentTarget = e.target.parentNode.parentNode.childNodes[1];
    if(e.target.innerHTML === 'delete'){
         if(confirm(`Are you sure you want to delete ${currentTarget.innerText}`))
@@ -49,14 +48,13 @@ const $table = document.querySelector("table")
         library.push(newBook);
         updateLocalStorage();
       }
-      function changeStatus(book) {
-        if (library[book].status === "read") {
-          library[book].status = "not read";
-        } else library[book].status = "read";
-      }
+      function changeStatus(book) {library[book].status === "read" || library[book].status === "reading" ? status : "not read"}
+      
+    
       function deleteBook(currentBook) {
         library.splice(currentBook, currentBook + 1);
       }
+      let book;
       function findBook(libraryArray, name) {
         if (libraryArray.length === 0 || libraryArray === null) {
           return;

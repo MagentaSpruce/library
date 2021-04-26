@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
-    <script delay src="index.js"></script>
+    
     <title>Library - Odin Project</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
                     <p>Input the following then submit:</p>
                     <h3>New books go here &darr;</h3>
                 </div>
-                <form action>
+                <form id="form" name="form" action="#">
                     <div class="five__columns">
                         <label for="name">Title</label>
                         <input type="text" class="u-full-width" id="name">
@@ -62,21 +62,21 @@
                             <option value="not-read">Not read</option>
                         </select>
                     </div>
-                    <input type="submit" value="submit" class="button-primary">
+                    <input type="submit" value="submit" name="submit" class="button-primary">
                     </form>
                     <div class="input-pic"></div>
             </div>
     <div class="display">
-        <h2>Library</h2>
+        <h2>Current Selection</h2>
         <div class="row">
             <div class="twelve__columns"></div>
-            <table class="twelve__columns">
+        <table class="twelve__columns1">
                 <tbody>
-                    <tr>
+                    <tr class=>
                         <th>Title</th>
                         <th>Author</th>
                         <th>Status</th>
-                        <th>Rating</th>
+                    <th>Delete</th>
                         <th></th>
                     </tr>
                 </tbody>
@@ -88,6 +88,7 @@
                             <button class="status-button">read</button>
                         </td>
                         <td>
+                        
                             <button class="delete">Delete</button>
                         </td>
                     </tr>
@@ -256,6 +257,6 @@
         </div>
     </main>
 
-    
+    <script src="index.js"></script>
 </body>
 </html>

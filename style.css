@@ -49,6 +49,11 @@ h1{
 h2{
     font-family: 'Cinzel';
     font-size: 3rem;
+    text-align: center;
+    color: var(--color-dark-1);
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+    
 }
 
 h3, 
@@ -239,8 +244,106 @@ svg{
     margin-top: 7rem;
     grid-column-gap: 4rem;
     
+}
+
+.display{
+    grid-column: mid-start / mid-end;
+    z-index: var(--z-index-m);
+    width: 40vw;
+    height: 50vh;
+    background-color: var(--color-white-2);
+    opacity: .6;
+    
     
 }
+
+.row{
+    margin-top: -2rem;
+    padding-left: 1.5rem;
+}
+
+.twelve__columns1{
+    width: 100%;
+    
+    }
+    
+
+  
+   tbody{
+       font-size: 2rem;
+       
+       color: var(--color-dark-2);
+       
+       
+       
+   }
+    
+tr{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    
+    text-align: -webkit-match-parent;
+    margin-right: 1rem;
+    
+    
+    
+}
+
+.delete{
+    padding: .5rem 1rem;
+    background-color: crimson;
+    color: var(--color-light-1);
+    text-transform: capitalize;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+   
+}
+
+.delete:hover{
+    transform: scale(1.05);
+    box-shadow: .3rem .2rem .3rem rgba(0,0,0,.6);
+}
+
+.delete:active{
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.status-button{
+    padding: .5rem .6rem;
+    background-color: var(--color-dark-2);
+    color: var(--color-white-1);
+    text-transform: capitalize;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-family: inherit;
+    width: 90%;
+    
+        
+   
+    
+
+    
+
+}
+
+.status-button:hover{
+    transform: translateY(-2px);
+    box-shadow: .3rem .2rem .3rem rgba(0,0,0,.6);
+}
+
+.status-button:active{
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+    
 
 .input{
     width: 20vw;
@@ -308,6 +411,7 @@ margin-top: 3px;
 cursor: pointer;
 outline: none;
 
+
 }
 
 .button-primary{
@@ -344,6 +448,7 @@ outline: none;
     background-size: cover;
     background-position: center;
     height: 50%;
+    width: 90%;
     border-radius:.5rem;
     border: 3px solid var(--color-dark-2);
     
@@ -355,45 +460,16 @@ outline: none;
 
 
 
-.input-pic{
-    width: 90%;
-    filter:opacity(1.1);
-    
-}
 
-.display{
-    grid-column: mid-start / mid-end;
-    z-index: var(--z-index-m);
-    width: 40vw;
-    height: 50vh;
-    background-color: var(--color-white-2);
-    
-    color: red;
 
-    
-}
 
-.display__library{
- 
-}
 
-.twelve__columns{
-    display: block;
-}
 
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    display: table;
-    border: 3px solid red;
-    
-    
-}
 
-tbody{
-    display: table-row-group;
-    border: 3px solid green;
-}
+
+
+
+
 
 
 
@@ -437,7 +513,7 @@ tbody{
 
 .finished{
     background-color: var(--color-gray-2);
-    height: 18.5rem;
+    height: 20rem;
   
     
     
@@ -469,8 +545,8 @@ fill: crimson;
 height: 2rem;
 width: 2rem;
 position: absolute;
-top: 0;
-left: 85%;
+top: 3px;
+left: 83%;
 
 }
 
