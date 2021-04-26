@@ -53,6 +53,7 @@ h2{
     color: var(--color-dark-1);
     font-weight: 700;
     margin: 1rem 0 2rem 0;
+    text-shadow: .2rem .2rem .5rem rgba(0,0,0,.6);
     
 }
 
@@ -82,6 +83,19 @@ a:hover{
 
 ul{
     list-style: none;
+}
+
+.madeBy{
+    float: right;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+   z-index: var(--z-index-m);
+
+}
+
+span{ 
+    color: green;
 }
 
 main{
