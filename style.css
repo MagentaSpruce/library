@@ -103,7 +103,7 @@ span{
 
 main{
     padding: 10vh 10vw;
-    background-image: url('/img/bg.jpg');
+    background-image: url('./img/bg.jpg');
     background-size: cover;
     height: 100vh;
     filter: brightness(130%);
