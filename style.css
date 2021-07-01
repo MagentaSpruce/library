@@ -413,7 +413,7 @@ form{
 }
 
 .input-pic{
-    background-image: url('/img/boy.jpg');
+    background-image: url('./img/boy.jpg');
     background-size: cover;
     background-position: center;
     height: 50%;
